@@ -1,0 +1,40 @@
+:root {
+    /* Catppuccin Mocha Colors */
+    --blue: #89b4fa;
+    --red: #f38ba8;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --orange: #fab387; /* peach */
+    --purple: #cba6f7; /* mauve */
+    --teal: #94e2d5;
+    --pink: #f5c2e7;
+
+    --background-0: #1e1e2e;
+    --background-1: #313244;
+    --background-2: #45475a;
+    --background-3: #585b70;
+
+    --foreground-0: #cdd6f4;
+    --foreground-1: #bac2de;
+    --foreground-2: #a6adc8;
+    --foreground-3: #9399b2;
+    --foreground-4: #7f849c;
+    --foreground-5: #6c7086;
+
+    --primary-color: var(--blue);
+    --secondary-color: var(--purple);
+    --accent-color: var(--pink);
+    --success-color: var(--green);
+    --warning-color: var(--yellow);
+    --error-color: var(--red);
+    --info-color: var(--blue);
+
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --radius-sm: 0.375rem;      /* 6px */
+    --radius-md: 0.5rem;        /* 8px */
+    --radius-lg: 0.75rem;       /* 12px */
+    --radius-xl: 1rem;          /* 16px */
+    --radius-2xl: 1.5rem;       /* 24px */
+    --radius-full: 9999px;      /* For fully rounded elements */
+}

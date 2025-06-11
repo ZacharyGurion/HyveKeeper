@@ -1,0 +1,45 @@
+:root {
+    /* Primary Colors - Muted but strong with subtle warmth */
+    --blue: #4a6b8a;
+    --red: #ab2b28;          /* Keeping original red as requested */
+    --yellow: #c4a558;
+    --green: #5b8c73;
+    --orange: #c66b47;
+    --purple: #8264a8;
+    --teal: #5a9288;
+    --gray: #6b6b6f;
+    --pink: #b5637a;
+
+    /* Backgrounds - Warm grays with red undertones */
+    --background-0: hsl(15, 12%, 8%);     /* Very dark warm gray - Luminosity ~2% */
+    --background-1: hsl(12, 15%, 14%);    /* Dark warm gray - Luminosity ~6% */
+    --background-2: hsl(10, 12%, 20%);    /* Medium-dark warm gray - Luminosity ~12% */
+    --background-3: hsl(8, 10%, 28%);     /* Lighter warm gray - Luminosity ~22% */
+
+    /* Foregrounds - Cool grays with subtle red warmth */
+    --foreground-0: hsl(5, 8%, 92%);      /* Very light warm white - Luminosity ~88% */
+    --foreground-1: hsl(6, 6%, 81%);      /* Light warm gray - Luminosity ~65% */
+    --foreground-2: hsl(7, 5%, 70%);      /* Medium warm gray - Luminosity ~45% */
+    --foreground-3: hsl(8, 4%, 60%);      /* Darker warm gray - Luminosity ~28% */
+    --foreground-4: hsl(9, 3%, 52%);      /* Dark warm gray - Luminosity ~18% */
+
+    /* Semantic Colors */
+    --primary-color: var(--red);
+    --secondary-color: var(--pink);
+    --accent-color: var(--orange);
+    --success-color: var(--green);
+    --warning-color: var(--yellow);
+    --error-color: var(--red);
+    --info-color: var(--blue);
+
+    /* Shadow with warm undertone */
+    --shadow-color: hsl(15, 20%, 5%, 0.6);
+
+    /* Border Radius Values */
+    --radius-sm: 0.125rem;      /* 6px */
+    --radius-md: 0.2rem;        /* 8px */
+    --radius-lg: 0.25rem;       /* 12px */
+    --radius-xl: 0.5rem;          /* 16px */
+    --radius-2xl: 0.75rem;       /* 24px */
+    --radius-full: 5px;      /* For fully rounded elements */
+}

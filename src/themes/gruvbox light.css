@@ -1,0 +1,41 @@
+:root {
+    --blue: #458588;
+    --red: #cc241d;
+    --yellow: #d79921;
+    --green: #98971a;
+    --orange: #d65d0e;
+    --purple: #b16286;
+    --teal: #689d6a;
+    --gray: #7c6f64;
+    --pink: #fb607f;
+
+    /* Background colors from Gruvbox Light */
+    --background-0: #fbf1c7;  /* bg0 */
+    --background-1: #ebdbb2;  /* bg1 */
+    --background-2: #d5c4a1;  /* bg2 */
+    --background-3: #bdae93;  /* bg3 */
+
+    /* Foreground colors from Gruvbox Light */
+    --foreground-0: #282828;  /* fg0 */
+    --foreground-1: #3c3836;  /* fg1 */
+    --foreground-2: #504945;  /* fg2 */
+    --foreground-3: #665c54;  /* fg3 */
+    --foreground-4: #7c6f64;  /* fg4 */
+
+    --primary-color: var(--blue);
+    --secondary-color: var(--teal);
+    --accent-color: var(--pink);
+    --success-color: var(--green);
+    --warning-color: var(--yellow);
+    --error-color: var(--red);
+    --info-color: var(--blue);
+
+    --shadow-color: rgba(40, 40, 40, 0.2);
+
+    --radius-sm: 0rem;      /* 6px */
+    --radius-md: 0rem;        /* 8px */
+    --radius-lg: 0rem;       /* 12px */
+    --radius-xl: 0rem;          /* 16px */
+    --radius-2xl: 0rem;       /* 24px */
+    --radius-full: 0px;      /* For fully rounded elements */
+}

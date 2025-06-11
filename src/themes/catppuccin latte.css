@@ -1,0 +1,39 @@
+:root {
+    /* Catppuccin Latte Colors */
+    --blue: #1e66f5;
+    --red: #d20f39;
+    --yellow: #df8e1d;
+    --green: #40a02b;
+    --orange: #fe640b; /* peach */
+    --purple: #8839ef; /* mauve */
+    --teal: #179299;
+    --pink: #ea76cb;
+
+    --background-0: #eff1f5;
+    --background-1: #e6e9ef;
+    --background-2: #dce0e8;
+    --background-3: #ccd0da;
+
+    --foreground-0: #4c4f69;
+    --foreground-1: #5c5f77;
+    --foreground-2: #6c6f85;
+    --foreground-3: #7c7f93;
+    --foreground-4: #8c8fa1;
+
+    --primary-color: var(--blue);
+    --secondary-color: var(--purple);
+    --accent-color: var(--pink);
+    --success-color: var(--green);
+    --warning-color: var(--yellow);
+    --error-color: var(--red);
+    --info-color: var(--blue);
+
+    --shadow-color: rgba(var(--foreground-0), 0.2);
+
+    --radius-sm: 0.375rem;      /* 6px */
+    --radius-md: 0.5rem;        /* 8px */
+    --radius-lg: 0.75rem;       /* 12px */
+    --radius-xl: 1rem;          /* 16px */
+    --radius-2xl: 1.5rem;       /* 24px */
+    --radius-full: 9999px;      /* For fully rounded elements */
+}
