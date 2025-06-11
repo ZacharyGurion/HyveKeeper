@@ -60,7 +60,7 @@
         <div class="flex flex-col h-full">
             <!-- Logo -->
             <div class="p-4 border-b" style="border-color: var(--accent-color);">
-                <h1 class="text-xl font-bold" style="color: var(--foreground-0);">Hypervisor Panel</h1>
+                <h1 class="text-xl font-bold" style="color: var(--foreground-0);">HyveKeeper</h1>
             </div>
 
             <!-- Navigation -->
