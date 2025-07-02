@@ -76,7 +76,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9-4 9 4v12l-9 4-9-4V6z" />
 							</svg>
-							Host
+							Home
 						</a>
 					</li>
 					<li>

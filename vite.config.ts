@@ -8,9 +8,9 @@ export default defineConfig({
 		host: '0.0.0.0',
 		port: 3000,
 		allowedHosts: [
-			'localhost',
-			'10.0.0.100',
-			'.zgurion.com',
-		]
+			//'localhost',
+			//'10.0.0.100',
+			'dev.zgurion.com',
+		],
 	}
 });

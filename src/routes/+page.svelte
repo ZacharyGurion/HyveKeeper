@@ -13,13 +13,13 @@
 
   onMount(async () => {
     try {
-      const response = await fetch('http://10.0.0.100:4000/api/vms');
+      const response = await fetch('https://api.zgurion.com/vms');
       vms = await response.json();
     } catch (error) {
       console.error('Error fetching VMs:', error);
     }
     try {
-      const response = await fetch('http://10.0.0.100:4000/api/jails');
+      const response = await fetch('https://api.zgurion.com/jails');
 			const jailData = await response.json();
       jails = jailData.jails;
 			console.log(jails);
@@ -34,9 +34,15 @@
     return status === 'running' ? 'var(--green)' : 'var(--red)';
   }
 
-  function formatSize(size: number): string {
-    if (size < 1024) return `${size} MB`;
-    return `${(size / 1024).toFixed(1)} GB`;
+  function mByteFmt(size: number): string {
+    if (size < 1024) return `${size.toFixed(2)} MB`;
+    return `${(size / 1024).toFixed(2)} GB`;
+  }
+
+  function byteFmt(size: number): string {
+    if (size < 1024*1000) return `${(size/1024).toFixed(2)} KB`;
+    if (size < 1024*1000000) return `${(size/(1024*1024)).toFixed(2)} MB`;
+    return `${(size / (1024*1024*1024)).toFixed(2)} GB`;
   }
 
   function formatPercentage(used: number, total: number): number {
@@ -67,7 +73,7 @@
           <div class="text-sm font-medium" style="color: var(--foreground-1);">Memory</div>
           <div class="mt-1">
             <div class="flex justify-between text-sm mb-1" style="color: var(--foreground-2);">
-              <span>{formatSize(nodeStats.memory.used)} / {formatSize(nodeStats.memory.total)}</span>
+              <span>{mByteFmt(nodeStats.memory.used)} / {mByteFmt(nodeStats.memory.total)}</span>
             </div>
             <div class="w-full h-2.5" style="background-color: var(--background-2); border-radius: var(--radius-full);">
               <div class="h-2.5"
@@ -81,7 +87,7 @@
           <div class="text-sm font-medium" style="color: var(--foreground-1);">Storage</div>
           <div class="mt-1">
             <div class="flex justify-between text-sm mb-1" style="color: var(--foreground-2);">
-              <span>{formatSize(nodeStats.storage.used)} / {formatSize(nodeStats.storage.total)}</span>
+              <span>{mByteFmt(nodeStats.storage.used)} / {mByteFmt(nodeStats.storage.total)}</span>
             </div>
             <div class="w-full h-2.5" style="background-color: var(--background-2); border-radius: var(--radius-full);">
               <div class="h-2.5"
@@ -113,13 +119,13 @@
                   <span class="text-sm" style="color: var(--foreground-1);">{jail.ip}</span>
                 </div>
               </div>
-              <div class="text-sm" style="color: var(--foreground-1);">
-                Uptime: {jail.uptime}
-              </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <!-- CPU -->
               <div>
+                <div class="text-sm font-medium mb-1" style="color: var(--foreground-1);">
+                  CPU
+                </div>
                 <div class="flex justify-between text-sm mb-1" style="color: var(--foreground-2);">
                   <span>{jail.cpu}%</span>
                 </div>
@@ -132,7 +138,7 @@
               <div>
                 <div class="text-sm font-medium mb-1" style="color: var(--foreground-1);">Memory</div>
                 <div class="flex justify-between text-sm mb-1" style="color: var(--foreground-2);">
-                  <span>{formatSize(jail.memory)} / {formatSize(jail.memory)}</span>
+                  <span>{byteFmt(jail.memory)} / {byteFmt(190000000)}</span>
                 </div>
                 <div class="w-full h-2.5" style="background-color: var(--background-1); border-radius: var(--radius-full);">
                   <div class="h-2.5" style="width: {formatPercentage(jail.memory, jail.memory)}%; background-color: var(--purple); border-radius: var(--radius-full);"></div>
@@ -192,7 +198,7 @@
               <div>
                 <div class="text-sm font-medium mb-1" style="color: var(--foreground-1);">Memory</div>
                 <div class="flex justify-between text-sm mb-1" style="color: var(--foreground-2);">
-                  <span>{formatSize(vm.memory.used)} / {formatSize(vm.memory.total)}</span>
+                  <span>{mByteFmt(vm.memory.used)} / {mByteFmt(vm.memory.total)}</span>
                 </div>
                 <div class="w-full h-2.5" style="background-color: var(--background-1); border-radius: var(--radius-full);">
                   <div class="h-2.5" style="width: {formatPercentage(vm.memory.used, vm.memory.total)}%; background-color: var(--purple); border-radius: var(--radius-full);"></div>
